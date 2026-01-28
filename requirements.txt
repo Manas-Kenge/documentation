@@ -1,4 +1,6 @@
+heroshot
 linkify-it-py
+playwright
 plone-sphinx-theme<2
 sphinx<9  # See https://github.com/plone/documentation/issues/2037
 sphinx-autobuild

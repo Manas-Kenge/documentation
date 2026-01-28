@@ -43,6 +43,7 @@ templates_path = ["_templates"]
 # They can be extensions coming with Sphinx (named "sphinx.ext.*")
 # or your custom ones.
 extensions = [
+    "heroshot.sphinx",
     "myst_parser",
     "notfound.extension",
     "sphinx.ext.autodoc",
@@ -476,3 +477,13 @@ def setup(app):
     app.add_config_value("source_replacements", {}, True)
     app.connect("source-read", source_replace)
     app.add_config_value("context", "documentation", "env")
+
+
+# -- Heroshot configuration ----------------------------------
+# Optional configuration for heroshot.sphinx extension
+# Screenshots are configured in .heroshot/config.json
+# These settings customize how the extension resolves screenshot paths
+heroshot_path = "_static"  # Base path for screenshots (matches outputDirectory in .heroshot/config.json)
+heroshot_light_suffix = "-light"  # Suffix for light mode variants
+heroshot_dark_suffix = "-dark"  # Suffix for dark mode variants
+heroshot_format = "png"  # Image format
